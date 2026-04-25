@@ -29,28 +29,3 @@ app/page.tsx
 The page auto-updates as you edit the file.
 
 ---
-
-## 🔤 Fonts
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load the [Geist](https://vercel.com/font) font family.
-
----
-
-## 📚 Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-* 📖 [Next.js Documentation](https://nextjs.org/docs) — learn about Next.js features and API
-* 🎓 [Learn Next.js](https://nextjs.org/learn) — interactive Next.js tutorial
-
-You can check out the [Next.js GitHub repository](https://github.com/vercel/next.js) — your feedback and contributions are welcome!
-
----
-
-## 🚀 Deploy on Vercel
-
-The easiest way to deploy your Next.js app is using the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
-
-For more details, check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
-
----
