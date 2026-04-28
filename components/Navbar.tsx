@@ -60,7 +60,7 @@ const Navbar = () => {
                         </div>
                     </div>
                     <div className='flex justify-between gap-3 text-sm md:text-lg font-md'>
-                        <div onClick={() => router.push('/login')} className='bg-[#eff0ec] hover:bg-[#e9e9e9] items-center md:p-4 md:px-6 rounded-lg duration-150 cursor-pointer hidden [@media(min-width:500px)]:flex '>Log in</div>
+                        <div onClick={() => router.push(`/login?callbackUrl=${pathname}`)} className='bg-[#eff0ec] hover:bg-[#e9e9e9] items-center md:p-4 md:px-6 rounded-lg duration-150 cursor-pointer hidden [@media(min-width:500px)]:flex '>Log in</div>
                         <div onClick={() => router.push('/signup')} className='bg-[#1e2330] hover:bg-[#262d3e] items-center p-4 px-6 rounded-full text-white cursor-pointer hidden [@media(min-width:500px)]:flex duration-150'>Sign up free</div>
                         <div onClick={() => ismenuVisible(!menuVisible)} className='items-center flex [@media(min-width:1133px)]:hidden'><Bars3Icon className='h-9' /></div>
                     </div>
