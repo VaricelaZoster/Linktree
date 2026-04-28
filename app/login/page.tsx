@@ -5,20 +5,10 @@ import { signIn, signOut, useSession } from "next-auth/react";
 export default function Home() {
   const { data: session } = useSession();
 
-  if (!session) {
-    return (
-      <button onClick={() => signIn("github")}>
-        Login with GitHub
-      </button>
-    );
-  }
-
-  return (
-    <>
-      <p>Welcome {session.user?.name}</p>
-      <button onClick={() => signOut()}>
-        Logout
-      </button>
-    </>
-  );
+  return(
+    <div className="flex justify-between h-screen">
+      <div className="bg-white w-full">Left</div>
+      <div className="bg-yellow-300 w-full">right</div>
+    </div>
+  )
 }

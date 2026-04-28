@@ -5,6 +5,7 @@ import { Bars3Icon } from "@heroicons/react/24/outline";
 import { useRouter } from 'next/navigation'
 import { useState, useEffect } from 'react';
 import Menu from './navbarcomponents/Menu';
+import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
 
@@ -33,9 +34,14 @@ const Navbar = () => {
         return () => window.removeEventListener("scroll", controlNavbar)
     }, [])
 
+
+    const pathname = usePathname()
+    const hideNavbar = pathname.startsWith("/login")
+
     return (
         <>
-            <div className={`fixed ${isVisible ? 'opacity-100 duration-150 top-10' : 'opacity-0 duration-150 -top-10'} z-10 w-[94%] bg-white h-12 md:h-21 mx-17 px-15 py-2 rounded-full flex items-center justify-between`}>
+            {!hideNavbar && (
+                <div className={`fixed ${isVisible ? 'opacity-100 duration-150 top-10' : 'opacity-0 duration-150 -top-10'} z-10 w-[94%] bg-white h-12 md:h-21 mx-17 px-15 py-2 rounded-full flex items-center justify-between`}>
                 <div className='flex items-center gap-10 '>
                     <div className='flex text-xl md:text-4xl font-medium cursor-pointer items-center' onClick={() => router.push('/')}>
                         <div>Linktree</div>
@@ -59,6 +65,7 @@ const Navbar = () => {
                     </div>
                 </Suspense>
             </div>
+            )}
 
         </>
     )
