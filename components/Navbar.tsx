@@ -37,7 +37,7 @@ const Navbar = () => {
 
     const pathname = usePathname()
 
-    const hiddenPrefixes = ["/login"];
+    const hiddenPrefixes = ["/login","/admin"];
 
     const hideNavbar = hiddenPrefixes.some((route) =>
         pathname.startsWith(route)
