@@ -11,6 +11,15 @@ export default function Home() {
 
   const router = useRouter()
 
+  const handleClick = async () => {
+    const res = await fetch("/api/test", {
+      method: "POST",
+    });
+
+    const data = await res.json();
+    console.log(data);
+  };
+
   return (
     <div className="flex justify-between h-screen">
       <div className="lg:basis-1/2 w-full">
@@ -23,6 +32,7 @@ export default function Home() {
             Continue using Github
           </button>
         </div>
+        <button onClick={handleClick} className="mr-60 cursor-pointer">Test</button>
         <button onClick={() => signOut()}>Sign out</button>
       </div>
       <div className={`hidden basis-1/2 lg:flex bg-yellow-300 w-full`}>right</div>
