@@ -15,7 +15,7 @@ export async function POST(req: Request) {
       );
     }
 
-    // 🔑 find user by username
+    //find user by username
     const user = await db
       .select()
       .from(usersTable)
